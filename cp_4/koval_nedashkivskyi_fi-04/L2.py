@@ -32,7 +32,7 @@ def calc_L2(z, queue):
                 if Z[j] != x1[j]:
                     R += 1
             if R < C:
-                candidates.append(x1[:n1])
+                candidates.append(x1[:n2])
         return candidates
         
     N, C = calc_N(t_b26)

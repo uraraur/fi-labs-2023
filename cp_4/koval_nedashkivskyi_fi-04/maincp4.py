@@ -21,12 +21,7 @@ if __name__ == '__main__':
     p2 = multiprocessing.Process(target=L2.calc_L2, args=(z, queue))
     p2.start()
 
-    print(f"size:{queue.qsize()}")
-
     p1.join()
     p2.join()
-
-    print("hi!")
-    print(f"size:{queue.qsize()}")
 
     print(time.time() - timer)

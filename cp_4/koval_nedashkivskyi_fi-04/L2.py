@@ -43,7 +43,8 @@ def calc_L2(z, queue):
     candid = sieve(L2, N, C, Z)
 
     file = open("L2.txt", "w+")
-    file.write(str(candid))
+    for i in candid:
+        file.write(str(candid[i]))
     file.close()
 
     queue.put(candid)
